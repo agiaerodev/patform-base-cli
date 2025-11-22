@@ -15,7 +15,7 @@ using Microsoft.EntityFrameworkCore.Metadata.Internal;
 /// For this Cli, we use Microsoft.Extensions.Configuration.CommandLine (7.0.0)
 /// 
 /// Into Package Manager Console you must Write!
-/// cd .\CliPlatform
+/// cd .\patform-base-cli
 /// 
 /// Or if you want to create a new Module and a multiple entities!
 ///2//--> //dotnet run -- -command moduleScaffold -modulename icommerce -entities stock,item,article
@@ -224,9 +224,7 @@ class Program
                 processReference.StartInfo.FileName = "dotnet";
                 processReference.StartInfo.Arguments = $"add {rootPath}\\{moduleName}\\{moduleName}.csproj reference " +
                                                        $"{rootPath}\\Idata\\Idata.csproj " +
-                                                       $"{rootPath}\\Icomment\\Icomment.csproj " +
-                                                       $"{rootPath}\\Core\\Core.csproj " +
-                                                       $"{rootPath}\\Isite\\Isite.csproj";
+                                                       $"{rootPath}\\core-module\\Core.csproj ";
                 processReference.StartInfo.WorkingDirectory = rootPath;
                 processReference.Start();
 
