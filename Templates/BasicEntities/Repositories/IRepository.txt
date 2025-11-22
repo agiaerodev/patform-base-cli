@@ -1,0 +1,10 @@
+﻿using Core.Interfaces;
+using Idata.Entities.{0};
+
+namespace {0}.Repositories.Interfaces
+{{
+    public interface I{1}Repository : IRepositoryBase<{1}>
+    {{
+
+    }}
+}}

@@ -1,0 +1,7 @@
+﻿namespace {0}.Services.Interfaces
+{{
+    public interface I{1}Service
+    {{
+
+    }}
+}}

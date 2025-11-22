@@ -1,0 +1,61 @@
+﻿using Idata.Data;
+using Idata.Data.Entities;
+using Idata.Data.Entities.Isite;
+using {0}.Config;
+using Newtonsoft.Json;
+
+namespace {0}.Data.Seeders
+{{
+    public class {0}ModuleSeeder
+    {{
+
+        public static void Seed(IApplicationBuilder applicationBuilder)
+        {{
+            using (var serviceScope = applicationBuilder.ApplicationServices.CreateScope())
+            {{
+                var context = serviceScope.ServiceProvider.GetService<IdataContext>();
+
+                context.Database.EnsureCreated();
+
+                object values = new
+                {{
+                    name = "{0}",
+                    alias = "{1}",
+                    permissions = Permissions.GetPermissions(),
+                    settings = Settings.GetSettings(),
+                    enabled = true,
+                    priority = 1,
+                    configs = Configs.GetConfigs(),
+                    cms_pages = CmsPages.GetCmsPages(),
+                    cms_sidebar = CmsSidebar.GetCmsSidebar()
+                }};
+
+
+                Module? module = context.Modules.Where(m => m.alias == "{1}").FirstOrDefault();
+
+                if (module == null)
+                {{
+                    module = JsonConvert.DeserializeObject<Module>(JsonConvert.SerializeObject(values));
+                    context.Modules.Add(module);
+                    context.SaveChanges();
+                    module = context.Modules.Where(m => m.alias == "{1}").FirstOrDefault();
+                    module.translations = new List<ModuleTranslation>() 
+                        {{
+                            new ModuleTranslation()
+                                {{
+                                    locale = "en",
+                                    title = "{0}"
+                                }}
+                        }};
+
+                }}
+                else
+                {{
+                    context.Entry(module).CurrentValues.SetValues(values);
+                }}
+                context.SaveChanges();
+
+            }}
+        }}
+    }}
+}}

@@ -1,0 +1,31 @@
+﻿using Icomment;
+using Idata.Data;
+using Microsoft.AspNetCore.Mvc.ApplicationParts;
+using Microsoft.EntityFrameworkCore;
+//appendUsing
+
+namespace {0}
+{{
+    public class {0}ServiceProvider
+    {{
+
+        public static WebApplicationBuilder? Boot(WebApplicationBuilder? builder)
+        {{
+            //TODO Implement controllerBase to avoid basic crud redundant code
+            builder.Services.AddControllers().ConfigureApplicationPartManager(o =>
+            {{
+                o.ApplicationParts.Add(new AssemblyPart(typeof({0}ServiceProvider).Assembly));
+            }});
+            //appendRepositories
+
+            //appendServices
+                        
+            //appendDecorators
+
+            return builder;
+
+
+        }}
+
+    }}
+}}

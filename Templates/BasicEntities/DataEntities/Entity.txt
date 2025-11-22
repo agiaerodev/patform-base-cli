@@ -1,0 +1,29 @@
+﻿using Idata.Data.Entities.Iprofile;
+using Idata.Entities.Core;
+using Ihelpers.DataAnotations;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using System.ComponentModel.DataAnnotations.Schema;
+
+
+namespace Idata.Entities.{0}
+{{
+
+    [Table("{4}", Schema = "{2}")]
+    public class {1}: EntityBase
+    {{
+
+        public {1}()
+        {{
+
+        }}
+
+        #region relations      
+
+
+        #endregion
+
+        
+
+    }}
+}}
+

@@ -1,0 +1,16 @@
+﻿using Core.Repositories;
+using Idata.Entities.Isubscription;
+using Ihelpers.Interfaces;
+using {0}.Repositories.Interfaces;
+using Idata.Entities.{0};
+
+namespace {0}.Repositories.Caching
+{{
+    public class Cached{1}Repository : CacheRepositoryBase<{1}>, I{1}Repository
+    {{        
+        public Cached{1}Repository(I{1}Repository repositoryBase, ICacheBase cacheBase) : base(repositoryBase, cacheBase)
+        {{
+            
+        }}   
+    }}
+}}

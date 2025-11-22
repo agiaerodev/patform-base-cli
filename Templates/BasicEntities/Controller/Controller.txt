@@ -1,0 +1,22 @@
+﻿using Core.Controllers;
+using Hangfire;
+using Iprofile.Helpers;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using {0}.Repositories.Interfaces;
+using Idata.Entities.{0};
+
+namespace {0}.Controllers
+{{
+    [Authorize]
+    [Route("api/{2}/v1/{5}")]
+    [ApiController]
+    public class {1}Controller : ControllerBase<{1}>
+    {{
+        public {1}Controller(I{1}Repository repositoryBase, IHttpContextAccessor currentContext, IBackgroundJobClient backgroundJobClient) : base(repositoryBase)
+        {{
+
+        }}
+
+    }}
+}}

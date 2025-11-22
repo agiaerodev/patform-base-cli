@@ -1,0 +1,24 @@
+﻿using Core;
+using Idata.Data;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+using {0}.Repositories.Interfaces;
+using {0}.Services.Interfaces;
+
+namespace {0}.Services
+{{
+    public class {1}Service : I{1}Service
+    {{        
+        public I{1}Repository _{3}Repository;
+        public IdataContext _dataContext;
+        public {1}Service(IdataContext dataContext, I{1}Repository {3}Repository)
+        {{
+            _{3}Repository = {3}Repository;
+            _dataContext = dataContext;
+        }}
+
+              
+       
+
+    }}
+}}
