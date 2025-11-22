@@ -45,6 +45,6 @@
     <PackageReference Include="Microsoft.Extensions.Configuration.CommandLine" Version="7.0.0" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Ihelpers\Ihelpers.csproj" />
+    <ProjectReference Include="..\helpers-module\Ihelpers.csproj" />
   </ItemGroup>
 </Project>
