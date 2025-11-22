@@ -429,7 +429,7 @@ class Program
                         }
 
                             // add the lines to the repositories and services comments with the indentation
-                            linesAppend["//appendRepositories"].Add($"builder.Services.AddScoped<typeof(I{entityName}Repository), typeof({entityName}Repository)>();", "            ");
+                            linesAppend["//appendRepositories"].Add($"builder.Services.AddScoped(typeof(I{entityName}Repository), typeof({entityName}Repository));", "            ");
                         if (services == true)
                           {
                            linesAppend["//appendServices"].Add($"builder.Services.AddScoped<I{entityName}Service, {entityName}Service>();", "            ");

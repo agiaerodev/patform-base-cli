@@ -1,6 +1,5 @@
 ﻿using Core.Controllers;
 using Hangfire;
-using Iprofile.Helpers;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using {0}.Repositories.Interfaces;

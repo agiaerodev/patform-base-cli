@@ -1,5 +1,4 @@
 ﻿using Core.Repositories;
-using Idata.Entities.Isubscription;
 using Ihelpers.Interfaces;
 using {0}.Repositories.Interfaces;
 using Idata.Entities.{0};
